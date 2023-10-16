@@ -1,16 +1,18 @@
 <template>
-  <div>hi</div>
-  <lunzi />
+  <div>导航 |
+    <router-link to="/">lunzi</router-link>|
+    <router-link to="/xxx">lunzi2</router-link>
+  </div>
+  <hr>
+  <router-view />
 </template>
 
-<script setup>
-import lunzi from './components/lunzi.vue'
+<script>
+
 
 export default{
   name: 'App',
-  components: {
-    lunzi
   }
-}
+
 
 </script>
