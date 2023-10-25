@@ -51,7 +51,7 @@ export default {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
-    color: azure;
+    color: rgb(1, 16, 66);
     @media (max-width: 500px) {
       padding-left: 0; 
     }
@@ -65,7 +65,7 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: rgb(193, 221, 193);
+    background: rgb(255, 255, 255);
   }
 }
 aside {
