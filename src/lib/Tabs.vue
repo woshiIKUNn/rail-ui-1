@@ -81,12 +81,16 @@
         color: $color;
         border-bottom: 1px solid $border-color;
         position: relative;
+
         &-item {
           cursor: pointer;
+        &:first-child {
+        margin-left: 0;
+      }
           &.selected {
             color: $blue;
           }
-        }
+    }
         &-indicator {
           position: absolute;
           height: 3px;
