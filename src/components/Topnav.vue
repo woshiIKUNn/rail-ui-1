@@ -1,63 +1,92 @@
 <template>
-  <nav class="topNav" >
-    <div class="logo">
-      LOGO
-      <!-- <img src="../assets/menu.svg" class="toggleAside" > -->
-    </div>
+  <div class="topnav">
+    <router-link to="/" class="logo">
+      <svg>
+          <use xlink:href="#icon-m019"></use>
+        </svg>
+      </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
-  </nav>
+    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
+    <use xlink:href="#icon-Menu"></use>
+    </svg>
+  </div>
   
 </template>
-
-
+<script lang="ts">
+import {
+  inject,
+  Ref
+} from "vue";
+export default {
+  props:{
+    toggleMenuButtonVisible:{
+      type: Boolean,
+      default: false
+    }
+  },
+  setup() {
+    const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+    const toggleMenu = () => {
+      menuVisible!.value = !menuVisible!.value;
+    };
+    return {
+      toggleMenu
+    };
+  },
+};
+</script>
 <style lang="scss" scoped>
-nav.topNav {
+$color: #eff1f1;
+.topnav {
+  color: $color;
   display: flex;
   padding: 16px;
-  position: absolute;
-  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 11;
+  width: 100%;
+  z-index: 10;
   justify-content: center;
-  align-content: center;
-  transition: all 0.25s;
-
-
-  > .logo {
+  align-items: center;
+  >.logo {
     max-width: 6em;
     margin-right: auto;
+    >svg {
+      width: 32px;
+      height: 32px;
+      color: azure;
+    }
   }
-  > .toggleAside{
-    width: 50px;
-    height: 50px;
-  }
-
-  > .menu {
+  >.menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
-
-    > li {
+    >li {
       margin: 0 1em;
     }
   }
-
-
-
+  >.toggleAside {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
   @media (max-width: 500px) {
-    > .toggleAside {
-      display: inline-block;
-    }
-    > .menu {
+    >.menu {
       display: none;
     }
-    > .logo {
+    >.logo {
       margin: 0 auto;
+    }
+    >.toggleAside {
+      display: inline-block;
     }
   }
 }

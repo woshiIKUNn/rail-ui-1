@@ -1,6 +1,6 @@
 <template>
      <div class="layout">
-    <Topnav class="nav" />
+    <Topnav :toggleMenuButtonVisible="true" class="nav" />
         <div class="content">
         <aside v-if="menuVisible">
         <h2>组件列表</h2>
@@ -51,7 +51,7 @@ export default {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
-    color: rgb(1, 16, 66);
+    color: #020202;
     @media (max-width: 500px) {
       padding-left: 0; 
     }
@@ -65,12 +65,11 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: rgb(255, 255, 255);
   }
 }
 aside {
-  background: rgb(86, 114, 156);
-  width: 150px;
+  background: rgb(179,179,179);
+background: linear-gradient(171deg, rgba(255,252,252,1) 0%, rgba(41,46,68,1) 74%);
   padding: 16px;
   position: fixed;
   top: 0;

@@ -1,61 +1,56 @@
 <template>
+  <div>
   <div class="topNav-wrapper">
-    <TopNav isHome />
+    <Topnav />
     <div class="banner">
-      <h1>black hole UI for Vue3</h1>
+      <h1>hole UI for Vue3</h1>
       <h2>一款面向未来的 UI 框架</h2>
       <p class="actions">
-        <router-link to="/doc">
-            开始 
-        </router-link>
-        <a href="#">
-            Github
-        </a>
+        <a href="#">Github</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
-  <div class="content">
+</div>
+<div class="features">
     <ul>
-      <li v-for="item in contentList" :key="item.title">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
+      <li>
+        <svg>
+          <use xlink:href="#icon-Vue"></use>
+        </svg>
+        <h3>基于 Vue 3</h3>
+        <p>骄傲地使用了 Vue 3 Composition API</p>
+      </li>
+      <li>
+        <svg>
+          <use xlink:href="#icon-TS"></use>
+        </svg>
+        <h3>基于 TypeScript </h3>
+        <p>源代码采用 TypeScript 书写（非严格检查）</p>
+      </li>
+      <li>
+        <svg>
+          <use xlink:href="#icon-light"></use>
+        </svg>
+        <h3>代码易读</h3>
+        <p>每个组件的源代码都极其简洁</p>
       </li>
     </ul>
   </div>
 </template>
 
-<script lang="ts" setup>
-import TopNav from '../components/Topnav.vue';
-
-const contentList = [
-  {
-    title: 'Vue 3',
-    description: '使用了最新的 Vue3 Composition API',
-  },
-  {
-    title: 'TypeScript',
-    description: '源代码采用了 TypeScript 编写',
-  },
-  {
-    title: 'Vite',
-    description: '官网基于 Vite2.x 构建',
-  },
-  {
-    title: '文档完整',
-    description: '所有组件拥有完整的使用文档及示例',
-  },
-];
+<script lang="ts" >
+import Topnav from "../components/Topnav.vue";
+export default {
+  components: {
+    Topnav,
+},
+};
 </script>
 <style lang="scss" scoped>
 
 .topNav-wrapper {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgb(15, 9, 5) 40%,
-    rgb(107, 57, 10) 60%,
-    rgb(8, 8, 8) 100%
-  );
+  background: linear-gradient(171deg, rgba(255,252,252,1) 0%, rgba(41,46,68,1) 74%);
   clip-path: ellipse(80% 60% at 50% 40%);
   color: #fff;
 
@@ -77,71 +72,59 @@ const contentList = [
 
   > .actions {
     margin-top: 40px;
-    padding: 8px 0;
+    padding: 8px 10px;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(30px);
+    border-radius: 18px;
     a {
+      
       margin:0 8px;
-      padding: 0 8px;
+      padding: 8px 24px;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
+      height: 38px;
+      line-height: 28px;
+      
+      border:none;
+      
     }
   }
 }
 
-.content {
+.features {
   margin: 64px auto;
-  padding: 0 16px;
-  @media (min-width: 500px) {
-    width: 500px;
-    > ul {
-      > li {
-        width: 100%;
-      }
-    }
-  }
+  width: 400px;
   @media (min-width: 800px) {
     width: 800px;
-    > ul {
-      > li {
-        width: 50%;
-      }
-    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
-    > ul {
-      > li {
-        width: 25%;
-      }
-    }
   }
-
-  > ul {
+  >ul {
     display: flex;
     flex-wrap: wrap;
-
-    > li {
+    >li {
+      width: 400px;
       margin: 16px 0;
       display: grid;
       justify-content: start;
       align-content: space-between;
       grid-template-areas:
-        'icon title'
-        'icon text';
+        "icon title"
+        "icon text";
       grid-template-columns: 80px auto;
       grid-template-rows: 1fr auto;
-
-      > h3 {
+      >svg {
+        grid-area: icon;
+        width: 64px;
+        height: 64px;
+      }
+      >h3 {
         grid-area: title;
         font-size: 28px;
       }
-
-      > p {
-        grid-area: text;
+      >p {
+        grid-area: text
       }
     }
   }
