@@ -3,7 +3,7 @@
   <div class="topNav-wrapper">
     <Topnav />
     <div class="banner">
-      <h1>hole UI for Vue3</h1>
+      <h1>Star Rail UI for Vue3</h1>
       <h2>一款面向未来的 UI 框架</h2>
       <p class="actions">
         <a href="#">Github</a>
