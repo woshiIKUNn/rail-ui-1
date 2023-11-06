@@ -1,5 +1,6 @@
-<template>
-  <div>Button 示例</div>
+<template >
+  <div class="gulu-main">
+  <div >Button 示例</div>
   <h1>示例1</h1>
   <div>
     <Button @click="onClick">你好</Button>
@@ -54,6 +55,7 @@
     <Button loading>加载中</Button>
     <Button>加载完毕</Button>
   </div>
+  </div>
 </template>
 <script lang="ts">
 import Button from "../lib/Button.vue";
@@ -67,3 +69,5 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+</style>

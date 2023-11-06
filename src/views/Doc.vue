@@ -56,6 +56,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  z-index: 99;
 > .nav {
     flex-shrink: 0;
   }

@@ -40,8 +40,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$color: #eff1f1;
+$color: #0d0e0e;
 .topnav {
+
   color: $color;
   display: flex;
   padding: 16px;
@@ -52,6 +53,7 @@ $color: #eff1f1;
   z-index: 10;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 5px 5px rgba(51,51,51,.1);
   >.logo {
     max-width: 6em;
     margin-right: auto;
