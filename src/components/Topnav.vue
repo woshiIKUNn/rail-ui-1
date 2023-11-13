@@ -40,9 +40,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$color: #0d0e0e;
+$color: #fdfdfd;
 .topnav {
-
+  background: linear-gradient(171deg, #fffcfc 0%, #292e44 74%);
   color: $color;
   display: flex;
   padding: 16px;
@@ -50,10 +50,10 @@ $color: #0d0e0e;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 5px rgba(51,51,51,.1);
+  z-index: 20;
   >.logo {
     max-width: 6em;
     margin-right: auto;
