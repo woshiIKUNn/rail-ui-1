@@ -30,6 +30,12 @@
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
         </ol>
+        <h2>更多项目</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/rocket">火箭记账vue3</router-link>
+          </li>
+        </ol>
       </aside>
       <main>
         <router-view />
@@ -89,6 +95,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
+  z-index: 10;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;

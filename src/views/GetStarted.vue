@@ -24,3 +24,9 @@
 
 </article>
     </template>
+     <style lang="scss" scoped>
+     .markdown-body{
+       background-color: white;
+       color: black;
+     }
+   </style>

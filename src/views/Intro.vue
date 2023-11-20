@@ -7,3 +7,9 @@
   下一节：<a href="#/doc/install">安装</a>
 </article>
     </template>
+     <style lang="scss" scoped>
+     .markdown-body{
+       background-color: white;
+       color: black;
+     }
+   </style>
