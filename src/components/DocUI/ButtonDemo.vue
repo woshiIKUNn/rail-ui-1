@@ -1,6 +1,6 @@
 <template >
   <div>
-  <h1>Button 按钮示例</h1>
+  <doc-title>Button 按钮示例</doc-title>
   <Demo :component="Button1Demo" />
   <Demo :component="Button2Demo" />
   <Demo :component="Button3Demo" />
@@ -19,11 +19,13 @@ import Button5Demo from "./Button5.demo.vue";
 import Attr from '../Attr.vue'
 import { columns } from "../../lib/data";
 import { ref } from "vue";
+import DocTitle from '../DocTitle.vue';
 
 export default {
   components: { 
     Demo,
-    Attr
+    Attr,
+    DocTitle
    },
   setup() {
     const data = ref([

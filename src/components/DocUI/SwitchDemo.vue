@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="h">Switch 组件示例 </h1>
+    <doc-title>Switch 组件示例 </doc-title>
     <Demo :component="Switch1Demo"></Demo> 
     <Demo :component="Switch2Demo"></Demo> 
     <Attr :columns="columns" :data="data"></Attr>
@@ -14,10 +14,12 @@ import Demo from '../Demo.vue'
 import Attr from '../Attr.vue'
 import { ref } from 'vue'
 import { columns } from '../../lib/data'
+import DocTitle from '../DocTitle.vue';
 export default {
   components: {
     Demo,
-    Attr
+    Attr,
+    DocTitle
   },
   setup(){
     const data = ref([
@@ -40,12 +42,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
-.h{
-  display: block;
-  font-size: 32px;
-  margin-bottom: 40px;
-  box-shadow: 2px 3px 3px rgba(0,0,0,.4);
-}
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;

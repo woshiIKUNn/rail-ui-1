@@ -1,5 +1,5 @@
 <template>
-  <h1>Tabs 示例</h1>
+  <doc-title>Tabs 标签栏示例</doc-title>
   <Demo :component="Tabs1Demo" />
   <Attr :columns="columns" :data="data"/>
   </template>
@@ -10,10 +10,12 @@
   import Attr from '../Attr.vue'
   import { columns } from "../../lib/data";
   import { ref } from "vue";
+  import DocTitle from '../DocTitle.vue';
   export default {
     components: {
      Demo,
-     Attr
+     Attr,
+     DocTitle
     },
     setup() {
       const data = ref([

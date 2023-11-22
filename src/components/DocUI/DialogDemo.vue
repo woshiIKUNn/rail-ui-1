@@ -1,5 +1,5 @@
 <template>
-<h1>Dialog 示例</h1>
+<doc-title>Dialog 对话框示例</doc-title>
 <Demo :component="Dialog1Demo" />
 <Demo :component="Dialog2Demo" />
 <Attr :columns="columns" :data="data"/>
@@ -12,10 +12,12 @@ import Dialog2Demo from './Dialog2.demo.vue';
 import Attr from '../Attr.vue'
 import { columns } from "../../lib/data";
 import { ref } from "vue";
+import DocTitle from '../DocTitle.vue';
 export default{
   components: {
     Demo,
-    Attr
+    Attr,
+    DocTitle
   },
   setup() {
     const data = ref([
