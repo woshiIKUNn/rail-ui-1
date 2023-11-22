@@ -3,7 +3,7 @@
     <Topnav :toggleMenuButtonVisible="true" class="nav" />
         <div class="content">
         <aside v-if="menuVisible">
-        <h2>文档</h2>
+        <h2 class="gulu-h2">文档</h2>
       <ol>
         <li>
           <router-link to="/doc/intro">介绍</router-link>
@@ -15,7 +15,7 @@
           <router-link to="/doc/get-started">开始使用</router-link>
         </li>
       </ol>
-        <h2>组件列表</h2>
+        <h2 class="gulu-h2">组件列表</h2>
         <ol>
           <li>
             <router-link to="/doc/switch">Switch 组件</router-link>
@@ -30,7 +30,7 @@
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
         </ol>
-        <h2>更多项目</h2>
+        <h2 class="gulu-h2">更多项目</h2>
         <ol>
           <li>
             <router-link to="/doc/rocket">火箭记账vue3</router-link>
@@ -58,23 +58,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout {
+.gulu-h2{
+    font-size: 24px;
+    padding-left: 0px;
+  }
+  .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
   z-index: 99;
 > .nav {
     flex-shrink: 0;
-  }
+  
+}
   > .content {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
-    color: #020202;
+    color: rgb(5, 5, 5);
     @media (max-width: 500px) {
       padding-left: 0; 
     }
   }
+  
 }
 .content {
   display: flex;
@@ -104,7 +110,7 @@ aside {
     > li {
       >a {
         display: block;
-        padding: 4px 16px;
+        padding: 16px 4px 20px;
         text-decoration: none;
       }
       .router-link-active {
