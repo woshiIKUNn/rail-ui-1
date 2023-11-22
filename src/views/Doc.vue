@@ -24,11 +24,18 @@
             <router-link to="/doc/button">Button 组件</router-link>
           </li>
           <li>
+          <router-link to="/doc/Radio">Radio 输入框</router-link>
+          </li>
+          <li>
             <router-link to="/doc/dialog">Dialog 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/Input">Input 输入框</router-link>
+          </li>
+          
         </ol>
         <h2 class="gulu-h2">更多项目</h2>
         <ol>
