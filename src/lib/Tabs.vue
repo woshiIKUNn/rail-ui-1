@@ -10,7 +10,7 @@
         <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
       </div>
       <div class="gulu-tabs-content">
-    <component class="gulu-tabs-content-item" :class="{selected: c.props!.title === selected }" v-for="c in defaults" :is="c" />
+        <component :is="current" :key="current.props!.title"/>
 </div>
 </div>
 </template>
@@ -19,7 +19,8 @@
     import {
       ref,
       onMounted,
-      onUpdated
+      onUpdated,
+computed
     } from 'vue'
     export default {
       props: {
@@ -57,6 +58,11 @@
         const titles = defaults.map((tag) => {
           return tag.props!.title
         })
+        const current = computed(() => {
+        return defaults.filter((tag) => {
+        return tag.props!.title === props.selected;
+      })[0];
+    });
         const select = (title: string) => {
           context.emit('update:selected', title)
         }
@@ -66,12 +72,13 @@
           select,
           selectedItem,
           indicator,
-          container
+          container,
+          current
         }
       }
     }
     </script>
-    <style lang="scss">
+    <style lang="scss" scoped>
     $blue: #40a9ff;
     $color: #333;
     $border-color: #d9d9d9;
@@ -84,9 +91,8 @@
 
         &-item {
           cursor: pointer;
-        &:first-child {
-        margin-left: 0;
-      }
+          padding: 8px 16px;
+      
           &.selected {
             color: $blue;
           }
@@ -103,12 +109,7 @@
       }
       &-content {
         padding: 8px 0;
-        &-item {
-          display: none;
-          &.selected {
-            display: block;
-          }
-        }
+      
       }
     }
     </style>

@@ -2,9 +2,10 @@
     常规使用
     </demo>
     <template>
-    <Tabs v-model:selected="x">
-      <Tab title="导航1">内容1</Tab>
-      <Tab title="导航2">内容2</Tab>
+    <Tabs v-model:selected="selected">
+      <Tab title="学习">学习</Tab>
+      <Tab title="吃饭">吃饭</Tab>
+      <Tab title="睡觉">睡觉</Tab>
     </Tabs>
     </template>
     
@@ -20,9 +21,9 @@
         Tab
       },
       setup() {
-        const x = ref('导航2')
+        const selected = ref('学习')
         return {
-          x
+          selected
         }
       }
     }

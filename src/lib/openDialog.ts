@@ -5,7 +5,9 @@ options: {
     title: any; 
     content: any; 
     ok: any; 
-    cancel: any; }) => {
+    cancel: any;
+    visible: any;
+    closeOnClickOverlay: any; }) => {
   const { title, content, ok, cancel } = options;
   const div = document.createElement("div");
   document.body.appendChild(div);
