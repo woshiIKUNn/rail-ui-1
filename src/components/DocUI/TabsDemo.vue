@@ -5,10 +5,10 @@
   </template>
   
   <script lang="ts">
-  import Demo from './Demo.vue'
+  import Demo from '../Demo.vue'
   import Tabs1Demo from './Tabs1.demo.vue'
-  import Attr from './Attr.vue'
-  import { columns } from "../lib/data";
+  import Attr from '../Attr.vue'
+  import { columns } from "../../lib/data";
   import { ref } from "vue";
   export default {
     components: {

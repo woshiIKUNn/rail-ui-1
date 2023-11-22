@@ -10,14 +10,14 @@
 </div>
 </template>
 <script lang="ts">
-import Demo from "./Demo.vue";
+import Demo from "../Demo.vue";
 import Button1Demo from "./Button1.demo.vue";
 import Button2Demo from "./Button2.demo.vue";
 import Button3Demo from "./Button3.demo.vue";
 import Button4Demo from "./Button4.demo.vue";
 import Button5Demo from "./Button5.demo.vue";
-import Attr from './Attr.vue'
-import { columns } from "../lib/data";
+import Attr from '../Attr.vue'
+import { columns } from "../../lib/data";
 import { ref } from "vue";
 
 export default {

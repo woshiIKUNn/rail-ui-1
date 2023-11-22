@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import SwitchDemo from "./components/SwitchDemo.vue";
+import SwitchDemo from "./components/DocUI/SwitchDemo.vue";
 import Home from "./views/Home.vue";
 import Doc from "./views/Doc.vue";
-import ButtonDemo from "./components/ButtonDemo.vue";
-import DialogDemo from "./components/DialogDemo.vue";
-import TabsDemo from "./components/TabsDemo.vue";
+import ButtonDemo from "./components/DocUI/ButtonDemo.vue";
+import DialogDemo from "./components/DocUI/DialogDemo.vue";
+import TabsDemo from "./components/DocUI/TabsDemo.vue";
 import Intro from './views/Intro.vue';
 import GetStarted from './views/GetStarted.vue'
 import Install from './views/Install.vue'
