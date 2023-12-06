@@ -6,7 +6,7 @@
       <h1>Star Rail UI for Vue3</h1>
       <h2>一款面向未来的 UI 框架</h2>
       <p class="actions">
-        <a href="#">Github</a>
+        <a href="https://github.com/woshiIKUNn">Github</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>

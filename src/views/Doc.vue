@@ -42,6 +42,12 @@
           <li>
             <router-link to="/doc/rocket">火箭记账vue3</router-link>
           </li>
+          <li>
+            <router-link to="/doc/houtai">后台管理系统</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/more">我的更多项目</router-link>
+          </li>
         </ol>
       </aside>
       <main>
@@ -101,7 +107,7 @@ export default {
 }
 aside {
   background: rgb(179,179,179);
-  background: linear-gradient(171deg, rgba(255,252,252,1) 0%, rgba(41,46,68,1) 74%);
+  background: linear-gradient(0deg, rgba(135,139,159,1) 9%, rgba(255,252,252,1) 100%);
   padding: 16px;
   position: fixed;
   top: 0;
@@ -121,7 +127,8 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: rgb(183, 182, 187);
+        background: rgb(219,219,219);
+        border-radius: 15%;
       }
     }
   }

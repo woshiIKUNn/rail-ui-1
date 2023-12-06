@@ -6,7 +6,7 @@
         </svg>
       </router-link>
     <ul class="menu">
-      <li>
+      <li class="toptext">
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 $color: #fdfdfd;
 .topnav {
-  background: linear-gradient(171deg, #fffcfc 0%, #292e44 74%);
+  background: radial-gradient(circle, rgba(135,139,159,1) 9%, rgba(255,252,252,1) 100%);
   color: $color;
   display: flex;
   padding: 16px;
@@ -60,8 +60,12 @@ $color: #fdfdfd;
     >svg {
       width: 32px;
       height: 32px;
-      color: azure;
+      color: rgb(12, 12, 12);
     }
+  }
+  .toptext{
+    font-weight:bold;
+    color: black;
   }
   >.menu {
     display: flex;

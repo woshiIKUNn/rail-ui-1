@@ -54,7 +54,7 @@
     font-size: 14px;
     display: inline-block;
   
-    .gulu-input__inner {
+    .gulu__inner {
       display: inline-block;
       background-color: #fff;
       border-radius: 4px;

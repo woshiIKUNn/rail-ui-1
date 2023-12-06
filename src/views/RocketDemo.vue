@@ -6,6 +6,13 @@
     <p>如果想看演示效果，请用手机模式来查看</p>
 <a href="https://rocket-test-1-1321626051.cos-website.ap-guangzhou.myqcloud.com">火箭记账-Vue版预览效果</a>查看
     </article>
+    <div class="text-2">
+    <img src="../assets/R1.png" alt="">
+    <img src="../assets/R3.png" alt="">
+    <img src="../assets/R4.png" alt="">
+    <img src="../assets/R6.png" alt="">
+    
+    </div>
 </template>
 <style lang="scss" scoped>
      .markdown-body{

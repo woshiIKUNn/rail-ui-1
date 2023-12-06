@@ -11,7 +11,8 @@ import Intro from './views/Intro.vue';
 import GetStarted from './views/GetStarted.vue'
 import Install from './views/Install.vue'
 import RocketDemo from './views/RocketDemo.vue'
-
+import HouTai from './views/HouTai.vue'
+import More from './views/more.vue'
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
@@ -32,6 +33,8 @@ export const router = createRouter({
         { path: "rocket", component: RocketDemo },
         { path: "Radio", component: RadioDemo },
         { path: "Input", component: InputDemo },
+        { path: "houtai", component: HouTai },
+        { path: "more", component: More },
         
       ],
     },
