@@ -2,6 +2,7 @@
      <div class="layout">
     <Topnav :toggleMenuButtonVisible="true" class="nav" />
         <div class="content">
+    <!-- v-if：menuVisible变化 aside也变化 -->
         <aside v-if="menuVisible">
         <h2 class="gulu-h2">文档</h2>
       <ol>

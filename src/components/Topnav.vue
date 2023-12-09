@@ -28,6 +28,7 @@ export default {
       default: false
     }
   },
+  // 用 provide 和 inject 实现切换功能
   setup() {
     const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
     const toggleMenu = () => {
@@ -36,7 +37,7 @@ export default {
     return {
       toggleMenu
     };
-  },
+  }, 
 };
 </script>
 <style lang="scss" scoped>

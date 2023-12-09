@@ -11,10 +11,12 @@ import { router } from './router';
 
 export default{
   name: 'App',
+  // 用 provide 和 inject 实现切换功能
   setup(){
     const width = document.documentElement.clientWidth
     const menuVisible = ref(width <= 500 ? false : true);
     provide('menuVisible', menuVisible)
+    // afterEach每次切换执行一次
     router.afterEach(() => {
       if(width <= 500){
         menuVisible.value = false;
