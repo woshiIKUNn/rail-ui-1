@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
+// 如何展示源代码 需要使用vue-loader的custom blocks功能
 const vueDemoPlugin = {
   name: "vue-block-demo",
   transform(code, path) {

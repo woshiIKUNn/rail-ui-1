@@ -1,5 +1,6 @@
 <template >
   <template v-if="visible">
+    <!-- teleport 把包裹的内容传送到body下面 防止dialog被遮挡-->
     <Teleport to="body">
     <div class="gulu-dialog-overlay" 
     @click="OnclickOverlay"></div>

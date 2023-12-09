@@ -9,7 +9,9 @@ options: {
     visible: any;
     closeOnClickOverlay: any; }) => {
   const { title, content, ok, cancel } = options;
+  // 创建div
   const div = document.createElement("div");
+  // 把div放到body里
   document.body.appendChild(div);
   const close = () => {
     app.unmount();
@@ -35,5 +37,6 @@ options: {
       );
     },
   });
+  // dialog放到div里
   app.mount(div);
 };

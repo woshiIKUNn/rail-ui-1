@@ -1,5 +1,5 @@
 <demo>
-    一键打开 Dialog
+    一句代码打开 Dialog
     </demo>
     <template>
      <Button theme="primary"  @click="showDialog">一键打开Dialog</Button>

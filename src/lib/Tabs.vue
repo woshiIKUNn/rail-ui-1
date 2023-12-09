@@ -24,8 +24,9 @@
           type: String
         }
       },
-      setup(props, context) {
-        
+      setup(props, context) { 
+        // 如何在运行时确认子组件类型 检查 context.slots.default()数组
+
         const defaults = context.slots.default!()
         defaults.forEach((tag) => {
           if (tag.type !== Tab) {

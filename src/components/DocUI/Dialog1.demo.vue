@@ -5,6 +5,7 @@
     <div>
       <Button @click="toggle">打开对话框</Button>
       <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
+       <!-- 具名插槽 -->
         <template v-slot:content>
           <strong>hi</strong>
           <div>hi2</div>
