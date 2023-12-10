@@ -75,12 +75,13 @@ export default {
 .gulu-h2{
     font-size: 24px;
     padding-left: 0px;
+    
   }
   .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  z-index: 99;
+  z-index: 99;   
 > .nav {
     flex-shrink: 0;
   
@@ -115,6 +116,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
+  overflow-y: scroll;
   z-index: 10;
   > h2 {
     margin-bottom: 4px;
