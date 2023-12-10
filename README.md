@@ -1,4 +1,5 @@
-# 笔记
+# 运行
+yarn install / yarn run dev / yarn build
 ## 全局安装create-vite-app
 yarn global add create-vite-app@xxx（版本号）   
 npm i -g create-vite-app@xxx（版本号）
